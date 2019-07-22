@@ -1,0 +1,19 @@
+{
+  "name": "delete-text-loader",
+  "version": "1.0.0",
+  "description": "delete special text loader for webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/warfrogsdf/delete-text-loader.git"
+  },
+  "author": "libing.ls@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/warfrogsdf/delete-text-loader/issues"
+  },
+  "homepage": "https://github.com/warfrogsdf/delete-text-loader#readme"
+}
