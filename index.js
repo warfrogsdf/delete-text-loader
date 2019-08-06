@@ -1,9 +1,10 @@
 const path = require('path');
 
-function isMatch(rule, fileName){
+function isMatch(rule, resourcePath){
   if(rule instanceof RegExp){
-    return rule.test(fileName);
+    return rule.test(resourcePath);
   }else if (typeof rule === 'string'){
+    var fileName = path.basename(resourcePath);
     return rule === fileName;
   }else {
     return false;
@@ -16,8 +17,7 @@ module.exports = function deleteTextLoader(content, map, meta) {
     var fileNameRule = this.query.fileName;
     var rules = this.query.rules;
     var resourcePath = this.resourcePath;
-    var fileName = path.basename(resourcePath);
-    if (!isMatch(fileNameRule, fileName)){
+    if (!isMatch(fileNameRule, resourcePath)){
       callback(null, content, map, meta);
     }else{
       var afterContent = rules.reduce(function (preContent, item, index, arr) {

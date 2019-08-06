@@ -1,6 +1,6 @@
 {
   "name": "delete-text-loader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "delete special text loader for webpack",
   "main": "index.js",
   "scripts": {
